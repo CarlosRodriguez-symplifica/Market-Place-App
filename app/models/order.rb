@@ -17,8 +17,11 @@
 #  user_id  (user_id => users.id)
 #
 class Order < ApplicationRecord
+  include ActiveModel::Validations
+
   before_validation :set_total!
 
+  validates_with EnoughProductsValidator
   validates :total, numericality: { greater_than_or_equal_to: 0 }
   validates :total, presence: true
 
