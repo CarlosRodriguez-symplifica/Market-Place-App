@@ -21,4 +21,6 @@ class Order < ApplicationRecord
   validates :total, presence: true
 
   belongs_to :user
+  has_many :placements, dependent: :destroy
+  has_many :products, through: :placements
 end
