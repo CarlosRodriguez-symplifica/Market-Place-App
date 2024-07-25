@@ -5,6 +5,7 @@
 #  id         :integer          not null, primary key
 #  price      :decimal(, )
 #  published  :boolean
+#  quantity   :integer          default(0)
 #  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
