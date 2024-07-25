@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :tokens, only: %i[create]
       resources :users, only: %i[show create update destroy]
       resources :products
+      resources :orders, only: %i[index]
     end
   end
 end
