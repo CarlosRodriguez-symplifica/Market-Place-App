@@ -16,7 +16,7 @@ class Api::V1::ProductsController < ApplicationController
         first: api_v1_products_path(page: 1),
         last: api_v1_products_path(page: @products.total_pages),
         prev: api_v1_products_path(page: @products.prev_page),
-        next: api_v1_products_path(page: @products.next_page),
+        next: api_v1_products_path(page: @products.next_page)
       }
     }
 
