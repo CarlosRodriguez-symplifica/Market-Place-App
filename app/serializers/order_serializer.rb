@@ -18,7 +18,11 @@
 #
 class OrderSerializer
   include FastJsonapi::ObjectSerializer
+
   attributes :total
+
   belongs_to :user
   has_many :products
+
+  cache_options enabled: true, cache_length: 12.hours
 end
