@@ -52,6 +52,7 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "bullet", "~> 7.2"
 end
 
 gem "kaminari", "~> 1.2"
