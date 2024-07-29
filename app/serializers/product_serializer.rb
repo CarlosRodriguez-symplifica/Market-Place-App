@@ -22,7 +22,7 @@
 class ProductSerializer
   include FastJsonapi::ObjectSerializer
 
-  attributes :title, :price, :published
+  attributes :title, :price, :published, :quantity
 
   belongs_to :user
 
