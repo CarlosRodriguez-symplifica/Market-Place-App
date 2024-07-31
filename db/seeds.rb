@@ -15,12 +15,12 @@ User.delete_all
   puts "Created a new user: #{user.email}"
 
   20.times do
-    published_value = [true, false, nil].sample
+    published_value = [true, false].sample
     product = Product.create!(
       title: Faker::Commerce.product_name,
       price: rand(1.0..100.0),
       published: published_value,
-      quantity: rand(1..100),
+      quantity: rand(0..100),
       user_id: user.id
     )
     puts "Created a brand new product: #{product.title}"
