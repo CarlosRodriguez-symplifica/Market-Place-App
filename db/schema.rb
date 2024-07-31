@@ -11,8 +11,11 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2024_07_25_135949) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "orders", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.decimal "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -20,8 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_25_135949) do
   end
 
   create_table "placements", force: :cascade do |t|
-    t.integer "order_id", null: false
-    t.integer "product_id", null: false
+    t.bigint "order_id", null: false
+    t.bigint "product_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity", default: 0
@@ -33,7 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_25_135949) do
     t.string "title"
     t.decimal "price"
     t.boolean "published"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity", default: 0

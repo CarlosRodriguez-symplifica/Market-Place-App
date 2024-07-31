@@ -2,12 +2,12 @@
 #
 # Table name: placements
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  quantity   :integer          default(0)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  order_id   :integer          not null
-#  product_id :integer          not null
+#  order_id   :bigint           not null
+#  product_id :bigint           not null
 #
 # Indexes
 #
@@ -16,8 +16,8 @@
 #
 # Foreign Keys
 #
-#  order_id    (order_id => orders.id)
-#  product_id  (product_id => products.id)
+#  fk_rails_...  (order_id => orders.id)
+#  fk_rails_...  (product_id => products.id)
 #
 require "test_helper"
 
