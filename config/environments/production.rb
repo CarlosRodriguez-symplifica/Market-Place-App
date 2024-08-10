@@ -73,7 +73,7 @@ Rails.application.configure do
     domain:                           'https://market-place-app-xa82.onrender.com',
     user_name:                        'apikey',
     password:                         ENV['SENDGRID_API_KEY'],
-    authentication:                   :plan,
+    authentication:                   :plain,
     enable_starttls_auto:             true
   }
 
