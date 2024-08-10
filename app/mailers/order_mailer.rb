@@ -5,7 +5,7 @@ class OrderMailer < ApplicationMailer
   #
   #   en.order_mailer.send_confirmation.subject
   #
-  default from: 'no-reply@marketplace.com'
+  default from: 'marketplaceplusapp@gmail.com'
   def send_confirmation(order)
     @order = order
     @user = @order.user
